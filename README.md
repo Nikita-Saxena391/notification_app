@@ -1,16 +1,82 @@
-# React + Vite
+# 📢 Notification System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend-based notification system built using React that allows users to create, view, sort, and filter notifications. The application is designed with a focus on modularity, responsiveness, and graceful error handling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📂 GitHub Repository
+https://github.com/Nikita-Saxena391/notification-app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Create notifications (Placement / Event / Result)
+- ✅ Real-time UI updates (instant display without waiting for API)
+- ✅ Priority-based sorting  
+  - Placement > Event > Result  
+- ✅ Filtering by notification type
+- ✅ Logging middleware integration
+- ✅ Error handling with fallback data
+- ✅ Clean and responsive UI
+
+---
+
+## 🛠️ Tech Stack
+
+- React (Vite)
+- JavaScript (ES6+)
+- Axios (API calls)
+- CSS (inline styling)
+
+---
+
+## 🧠 Architecture
+
+- **Components**
+  - `NotificationForm` → Handles user input
+  - `NotificationList` → Displays notifications
+
+- **Services**
+  - `api.js` → API communication
+  - `auth.js` → Authentication handling
+
+- **Middleware**
+  - `logger.js` → Logging system
+
+---
+
+## 🔄 Data Flow
+
+1. User enters notification details  
+2. UI updates instantly using local state  
+3. API request is triggered  
+4. If API fails, fallback ensures UI still works  
+5. Notifications are displayed with sorting and filtering  
+
+---
+
+## ⚠️ Error Handling
+
+- Graceful handling of API failures  
+- Fallback mock data ensures uninterrupted user experience  
+- Logging system captures errors without breaking UI  
+
+---
+
+## 🧪 How to Run Locally
+
+```bash
+# Clone repo
+git clone https://github.com/Nikita-Saxena391/notification-app.git
+
+# Go to project folder
+cd notification-app
+
+# Install dependencies
+npm install
+
+# Run project
+npm run dev
