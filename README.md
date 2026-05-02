@@ -4,7 +4,7 @@ A frontend-based notification system built using React that allows users to crea
 
 
 
-## ✨ Features
+##  Features
 
 - Create notifications (Placement / Event / Result)
 - Real-time UI updates (instant display without waiting for API)
