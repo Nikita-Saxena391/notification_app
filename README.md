@@ -17,7 +17,7 @@ A frontend-based notification system built using React that allows users to crea
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - React (Vite)
 - JavaScript (ES6+)
