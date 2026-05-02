@@ -46,6 +46,31 @@ A frontend-based notification system built using React that allows users to crea
 
 ---
 
+## 🏗️ System Architecture
+
+```mermaid
+graph TD
+    A[User] --> B[NotificationForm]
+    B --> C[App State]
+    C --> D[NotificationList]
+
+    B --> E[API Service]
+    E --> F[Backend Server]
+
+    B --> G[Auth Service]
+    G --> F
+
+    E --> H[Logger Middleware]
+    G --> H
+    H --> F
+
+    F -->|Success| E
+    F -->|Failure| I[Fallback Data]
+
+    I --> C
+    E --> C
+---
+
 ## 🔄 Data Flow
 
 1. User enters notification details  
